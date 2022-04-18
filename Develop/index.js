@@ -2,6 +2,9 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const util = require('util');
+const generatePage = require('./src/generate-readme.js');
+const generateReadme = require('../src/generate-readme.js');
+
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -15,40 +18,14 @@ const questions = [
     {
         type: 'confirm',
         name: 'confirmDescription',
-        message: 'Would you like to give the project a description?',
-        default: true
-    },
-    {
-        type: 'input',
-        name: 'description',
-        message: "Provide a short description explaining the what, why, and how of your project.",
-        when: ({ confirmDescription }) => confirmDescription
-    },
-    // TABLE OF CONTENTS
-    {
-        type: 'confirm',
-        name: 'confirmTOC',
-        message: 'Would you like to give the project a table of contents section?',
-        default: true
-    },
-    {
-        type: 'input',
-        name: 'tableOfContents',
-        message: "Add a table of contents to make it easy for users to find what they need.",
-        when: ({ confirmTOC }) => confirmTOC
+        message: 'Give the project a description.',
     },
     // INSTALLATION
     {
         type: 'confirm',
         name: 'confirmInstallationInstructions',
-        message: 'Would you like to give the project a section that explains how it should be installed?',
+        message: 'Explain how the project should be installed.',
         default: true
-    },
-    {
-        type: 'input',
-        name: 'installationInstructions',
-        message: "What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.",
-        when: ({ confirmInstallationInstructions }) => confirmInstallationInstructions
     },
     // USAGE
     {
@@ -114,8 +91,7 @@ const questions = [
         name: 'tests',
         message: "Provide examples of how to run tests for the project.",
         when: ({ confirmTests }) => confirmTests
-    }
-];
+    }];
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) { }
@@ -124,4 +100,10 @@ function writeToFile(fileName, data) { }
 function init() { }
 
 // Function call to initialize app
-init();
+init()
+    .then(promptInput)
+    .then(readmeData => {
+        const readmeContent = generateReadme(readmeData);
+    })
+
+    ;
