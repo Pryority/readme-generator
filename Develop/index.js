@@ -2,7 +2,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const util = require('util');
-const generateMarkdown = require("./Develop/utils/generateMarkdown")
+const generateMarkdown = require("./utils/generateMarkdown.js")
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -10,13 +10,13 @@ const questions = [
     {
         type: "input",
         name: "title",
-        message: "What is the title of your project? (REQUIRED)",
+        message: "What is the title of your project?",
     },
     // DESCRIPTION
     {
         type: 'confirm',
         name: 'confirmDescription',
-        message: 'Give the project a description.',
+        message: `Give the project a description.`,
     },
     // INSTALLATION
     {
@@ -37,9 +37,16 @@ const questions = [
     },
     // LICENSE
     {
-        type: 'input',
-        name: 'license',
-        message: 'What license will the project be using?',
+        type: "list",
+        message: "Which license is the application is covered under",
+        name: "license",
+        choices: ["MIT", "Apache", "GPLv3"]
+    },
+    // GITHUB USERNAME
+    {
+        type: "input",
+        message: "what is your Github username?",
+        name: "username"
     },
     // CONTRIBUTING
     {
@@ -60,25 +67,27 @@ const questions = [
         message: "Provide examples of how to run tests for the project.",
     }];
 
+// Returns the questions array as inquirer prompts
 promptInput = questions => {
     return inquirer.prompt(questions);
 }
+
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    fs.writeFile(fileName, $template, err => {
+    fs.writeFile(fileName, data, err => {
         if (err) {
             console.log(err);
         }
+        generateMarkdown(data);
         console.log('Your readme file has been generated!')
     });
 }
 
 // TODO: Create a function to initialize app
-function init() { }
+function init() {
+    promptInput(questions);
+    writeToFile('./dist/readme.md', data);
+}
 
 // Function call to initialize app
 init()
-    .then(promptInput)
-    .then(readmeData => {
-        const readmeContent = generateMarkdown(readmeData);
-    });
