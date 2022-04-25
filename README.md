@@ -3,7 +3,7 @@
       
     ![badge]()<br />
     ## Description
-    🔍 An outdoor fitness adventure game combining traditional game mechanics with navigation skills.
+    🔍 An outdoor adventure racing game.
     ## Table of Contents
     - [Description](#description)
     - [Installation](#installation)
@@ -13,31 +13,22 @@
     - [Tests](#tests)
     - [Questions](#questions)
     ## Installation
-    💾 The project is a mobile application that is meant to be played on iphone.
+    💾 First, download the app. Then create an account. Finally, begin exploring circuits created by people near you.
     ## Usage
-    💻 First, find the link below to download the latest stable release of Athleague. Then install it and create an account!
-    function renderLicenseSection(response) {
-  if (response.license) {
-    const markdown = `
+    💻 Using your phone, navigate to circuits and complete them in exchange for experience points and a workout.
+    
     ## License
-    ![badge](https://img.shields.io/badge/license-${link}-brightgreen)
+    [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+
     <br />
-    This application is covered by the ${renderLicenseLink(link)} license.
-    `;
-    return markdown;
-  } else {
-    return '';
-  };
-} 
+    This application is covered by the MIT license.
+     
     ## Contributing
     👪 undefined
     ## Tests
-    ✏️ There are no tests available yet.
-    ## Questions
-    ✋ undefined<br />
-    <br />
+    ✏️ There are no tests currently.
     :octocat: Find me on GitHub: [Pryority](https://github.com/Pryority)<br />
     <br />
-    ✉️ Email me with any questions: undefined<br /><br />
-    _This README was generated with ❤️ by [README-generator](https://github.com/jpd61/README-generator) 🔥🔥🔥_
+    ✉️ Email me with any questions: matthewapryor@gmail.com<br /><br />
   
