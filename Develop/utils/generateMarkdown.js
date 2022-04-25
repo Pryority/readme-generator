@@ -54,7 +54,7 @@ function generateMarkdown(answers) {
   return `
     <h1 align="center">${answers.projectTitle} 👋</h1>
       
-    ![badge](${renderLicenseBadge})<br />
+    ![badge]()<br />
     ## Description
     🔍 ${answers.description}
     ## Table of Contents

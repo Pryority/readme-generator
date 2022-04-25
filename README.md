@@ -1,22 +1,9 @@
 
     <h1 align="center">undefined 👋</h1>
       
-    ![badge](function renderLicenseBadge(response) {
-  if (response.license === "MIT") {
-    badge = `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)\n\n`;
-    return badge;
-  } else if (response.license === "Apache") {
-    badge = `[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)\n\n`;
-    return badge;
-  } else if (response.license === "GPLv3") {
-    badge = `[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)\n\n`;
-    return badge;
-  } else {
-    return '';
-  };
-})<br />
+    ![badge]()<br />
     ## Description
-    🔍 hah
+    🔍 An outdoor fitness adventure game combining traditional game mechanics with navigation skills.
     ## Table of Contents
     - [Description](#description)
     - [Installation](#installation)
@@ -26,9 +13,9 @@
     - [Tests](#tests)
     - [Questions](#questions)
     ## Installation
-    💾 adhaha
+    💾 The project is a mobile application that is meant to be played on iphone.
     ## Usage
-    💻 ahahaya
+    💻 First, find the link below to download the latest stable release of Athleague. Then install it and create an account!
     function renderLicenseSection(response) {
   if (response.license) {
     const markdown = `
@@ -45,11 +32,11 @@
     ## Contributing
     👪 undefined
     ## Tests
-    ✏️ hadfheryr
+    ✏️ There are no tests available yet.
     ## Questions
     ✋ undefined<br />
     <br />
-    :octocat: Find me on GitHub: [adfhaa](https://github.com/adfhaa)<br />
+    :octocat: Find me on GitHub: [Pryority](https://github.com/Pryority)<br />
     <br />
     ✉️ Email me with any questions: undefined<br /><br />
     _This README was generated with ❤️ by [README-generator](https://github.com/jpd61/README-generator) 🔥🔥🔥_
