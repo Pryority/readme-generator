@@ -60,6 +60,12 @@ const questions = [
         type: 'input',
         name: 'tests',
         message: "Provide examples of how to run tests for the project.",
+    },
+    // EMAIL
+    {
+        type: 'input',
+        name: 'email',
+        message: "Provide your email where others can contact you or ask questions.",
     }
 ]
 

@@ -36,7 +36,7 @@ function renderLicenseSection(response) {
     ## License
     ${renderLicenseBadge(response)}
     ${renderLicenseLink(response)}
-    <br />
+
     This application is covered by the ${response.license} license.
     `;
     return markdown;
@@ -48,31 +48,40 @@ function renderLicenseSection(response) {
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(answers) {
   return `
-    ${answers.title} 👋
-      
-    ## Description
-    🔍 ${answers.description}
-    ## Table of Contents
-    - [Description](#description)
-    - [Installation](#installation)
-    - [Usage](#usage)
-    - [License](#license)
-    - [Contributing](#contributing)
-    - [Tests](#tests)
-    - [Questions](#questions)
-    ## Installation
-    💾 ${answers.installation}
-    ## Usage
-    💻 ${answers.usage}
-    ${renderLicenseSection(answers)} 
-    ## Contributing
-    👪 ${answers.contributing}
-    ## Tests
-    ✏️ ${answers.tests}
-    :octocat: Find me on GitHub: [${answers.username}](https://github.com/${answers.username})<br />
-    <br />
-    ✉️ Email me with any questions: matthewapryor@gmail.com<br /><br />
-  `;
+  # ${answers.title}
+    
+  ## Description
+  ${answers.description}
+
+  ## Table of Contents 🔍
+  - [Description](#description)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [License](#license)
+  - [Contributing](#contributing)
+  - [Tests](#tests)
+  - [Questions](#questions)
+
+  ## Installation 💾
+  # ${answers.installation}
+  
+  ## Usage 💻
+  # ${answers.usage}
+
+  ## License 💿
+  # ${renderLicenseSection(answers)} 
+
+  ## Contributing 👪
+  # ${answers.contributing}
+
+  ## Tests 🧪
+  ✏️ ${answers.tests}
+  
+  ## Questions?
+  ✉️ Email me with any questions: ${answers.email}
+
+  :octocat: Find me on GitHub: [${answers.username}](https://github.com/${answers.username})<br />
+`;
 }
 
 module.exports = generateMarkdown;
