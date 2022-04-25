@@ -20,7 +20,7 @@ function renderLicenseBadge(response) {
 function renderLicenseLink(response) {
   if (response.license === "MIT") {
     link = `(https://opensource.org/licenses/MIT)\n\nYou have the freedom to do as you like with this permissive software, as long as an original copy and license notice is included. I cannon be held liable for this software.\n\n`;
-    return link;
+    markdown += link;
   } else if (response.license === "Apache") {
     link = `(http://www.apache.org/licenses/LICENSE-2.0.html)\n\nYou have the freedom to do as you like with this permissive software. This license also contains a patent license from the contributors of the code.\n\n`;
     return link;
@@ -37,12 +37,13 @@ function renderLicenseLink(response) {
 // If there is no license, return an empty string
 function renderLicenseSection(response) {
   if (response.license) {
-    return `
+    const markdown = `
     ## License
     ![badge](https://img.shields.io/badge/license-${link}-brightgreen)
     <br />
     This application is covered by the ${renderLicenseLink(link)} license.
     `;
+    return markdown;
   } else {
     return '';
   };

@@ -16,7 +16,7 @@
   };
 })<br />
     ## Description
-    🔍 Athleague is the first ever game that awards you for daily exercise.
+    🔍 hah
     ## Table of Contents
     - [Description](#description)
     - [Installation](#installation)
@@ -26,17 +26,18 @@
     - [Tests](#tests)
     - [Questions](#questions)
     ## Installation
-    💾 First, install npm. Then install node. Then buy Ethereum.
+    💾 adhaha
     ## Usage
-    💻 This application is intended for mobile use, primarily. Start off by downloading the app and creating an account.
+    💻 ahahaya
     function renderLicenseSection(response) {
   if (response.license) {
-    return `
+    const markdown = `
     ## License
     ![badge](https://img.shields.io/badge/license-${link}-brightgreen)
     <br />
     This application is covered by the ${renderLicenseLink(link)} license.
     `;
+    return markdown;
   } else {
     return '';
   };
@@ -44,11 +45,11 @@
     ## Contributing
     👪 undefined
     ## Tests
-    ✏️ There are not yet tests.
+    ✏️ hadfheryr
     ## Questions
     ✋ undefined<br />
     <br />
-    :octocat: Find me on GitHub: [Pryority](https://github.com/Pryority)<br />
+    :octocat: Find me on GitHub: [adfhaa](https://github.com/adfhaa)<br />
     <br />
     ✉️ Email me with any questions: undefined<br /><br />
     _This README was generated with ❤️ by [README-generator](https://github.com/jpd61/README-generator) 🔥🔥🔥_
