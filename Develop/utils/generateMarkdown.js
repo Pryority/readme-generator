@@ -17,11 +17,14 @@ function renderLicenseBadge(response) {
 // If there is no license, return an empty string
 function renderLicenseLink(response) {
   if (response.license === "MIT") {
-    response = `(https://opensource.org/licenses/MIT)\n\nYou have the freedom to do as you like with this permissive software, as long as an original copy and license notice is included. I cannon be held liable for this software.\n\n`;
+    response = `(https://opensource.org/licenses/MIT)
+  # You have the freedom to do as you like with this permissive software, as long as an original copy and license notice is included. I cannon be held liable for this software.\n\n`;
   } else if (response.license === "Apache") {
-    response = `(http://www.apache.org/licenses/LICENSE-2.0.html)\n\nYou have the freedom to do as you like with this permissive software. This license also contains a patent license from the contributors of the code.\n\n`;
+    response = `(http://www.apache.org/licenses/LICENSE-2.0.html)
+  # You have the freedom to do as you like with this permissive software. This license also contains a patent license from the contributors of the code.\n\n`;
   } else if (response.license === "GPLv3") {
-    response = `(http://www.gnu.org/licenses/gpl-3.0.html)\n\nYou have the freedom to run, study, share, and modify this permissive software. Anyone who acquires this software must make it available to anyone else under the same licensing agreement.\n\n`;
+    response = `(http://www.gnu.org/licenses/gpl-3.0.html)
+  # You have the freedom to run, study, share, and modify this permissive software. Anyone who acquires this software must make it available to anyone else under the same licensing agreement.\n\n`;
   } else {
     return '';
   };
@@ -33,12 +36,11 @@ function renderLicenseLink(response) {
 function renderLicenseSection(response) {
   if (response.license) {
     const markdown = `
-    ## License
-    ${renderLicenseBadge(response)}
-    ${renderLicenseLink(response)}
+  # ${renderLicenseBadge(response)}
+  # ${renderLicenseLink(response)}
 
-    This application is covered by the ${response.license} license.
-    `;
+  # This application is covered by the ${response.license} license.
+  `;
     return markdown;
   } else {
     return '';
@@ -48,10 +50,10 @@ function renderLicenseSection(response) {
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(answers) {
   return `
-  # ${answers.title}
+  ### ${answers.title} ✨
     
-  ## Description
-  ${answers.description}
+  ## Description 📑
+  # ${answers.description}
 
   ## Table of Contents 🔍
   - [Description](#description)
@@ -69,18 +71,18 @@ function generateMarkdown(answers) {
   # ${answers.usage}
 
   ## License 💿
-  # ${renderLicenseSection(answers)} 
+  ${renderLicenseSection(answers)} 
 
   ## Contributing 👪
   # ${answers.contributing}
 
   ## Tests 🧪
-  ✏️ ${answers.tests}
+  # ${answers.tests}
   
-  ## Questions?
-  ✉️ Email me with any questions: ${answers.email}
+  ## Questions? ✉️
+  # Email me with any questions: ${answers.email}
 
-  :octocat: Find me on GitHub: [${answers.username}](https://github.com/${answers.username})<br />
+  # Find me on GitHub: [${answers.username}](https://github.com/${answers.username}) :octocat: 
 `;
 }
 
