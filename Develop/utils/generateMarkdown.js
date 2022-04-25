@@ -35,6 +35,7 @@ function renderLicenseSection(response) {
     const markdown = `
     ## License
     ${renderLicenseBadge(response)}
+    ${renderLicenseLink(response)}
     <br />
     This application is covered by the ${response.license} license.
     `;
@@ -47,9 +48,8 @@ function renderLicenseSection(response) {
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(answers) {
   return `
-    <h1 align="center">${answers.projectTitle} 👋</h1>
+    ${answers.title} 👋
       
-    ![badge]()<br />
     ## Description
     🔍 ${answers.description}
     ## Table of Contents

@@ -1,9 +1,8 @@
 
-    <h1 align="center">undefined 👋</h1>
+    Athleague 👋
       
-    ![badge]()<br />
     ## Description
-    🔍 An outdoor adventure racing game.
+    🔍 OUtdoor adventure racing
     ## Table of Contents
     - [Description](#description)
     - [Installation](#installation)
@@ -13,12 +12,17 @@
     - [Tests](#tests)
     - [Questions](#questions)
     ## Installation
-    💾 First, download the app. Then create an account. Finally, begin exploring circuits created by people near you.
+    💾 First download then create account then play
     ## Usage
-    💻 Using your phone, navigate to circuits and complete them in exchange for experience points and a workout.
+    💻 Find and create circuits near you in only a few taps of your screen!
     
     ## License
     [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+
+    (https://opensource.org/licenses/MIT)
+
+You have the freedom to do as you like with this permissive software, as long as an original copy and license notice is included. I cannon be held liable for this software.
 
 
     <br />
@@ -27,7 +31,7 @@
     ## Contributing
     👪 undefined
     ## Tests
-    ✏️ There are no tests currently.
+    ✏️ There are none currently.
     :octocat: Find me on GitHub: [Pryority](https://github.com/Pryority)<br />
     <br />
     ✉️ Email me with any questions: matthewapryor@gmail.com<br /><br />
