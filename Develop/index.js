@@ -85,7 +85,6 @@ function init() {
         .then(function (response) {
             writeToFile(path, response)
         })
-
 };
 
 // Function call to initialize app

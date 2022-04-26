@@ -17,13 +17,13 @@ function renderLicenseBadge(response) {
 // If there is no license, return an empty string
 function renderLicenseLink(response) {
   if (response.license === "MIT") {
-    response = `(https://opensource.org/licenses/MIT)
+    response = `This application is covered by the [${response.license}](https://opensource.org/licenses/MIT) license.
   You have the freedom to do as you like with this permissive software, as long as an original copy and license notice is included. I cannon be held liable for this software.\n\n`;
   } else if (response.license === "Apache") {
-    response = `(http://www.apache.org/licenses/LICENSE-2.0.html)
+    response = `This application is covered by the [${response.license}](http://www.apache.org/licenses/LICENSE-2.0.html) license.
   You have the freedom to do as you like with this permissive software. This license also contains a patent license from the contributors of the code.\n\n`;
   } else if (response.license === "GPLv3") {
-    response = `(http://www.gnu.org/licenses/gpl-3.0.html)
+    response = `This application is covered by the [${response.license}](http://www.gnu.org/licenses/gpl-3.0.html) license.
   You have the freedom to run, study, share, and modify this permissive software. Anyone who acquires this software must make it available to anyone else under the same licensing agreement.\n\n`;
   } else {
     return '';
@@ -36,10 +36,7 @@ function renderLicenseLink(response) {
 function renderLicenseSection(response) {
   if (response.license) {
     const markdown = `
-  ${renderLicenseBadge(response)}
-  ${renderLicenseLink(response)}
-
-  ### This application is covered by the ${response.license} license.
+  ${renderLicenseBadge(response)} ${renderLicenseLink(response)}
   `;
     return markdown;
   } else {
@@ -74,7 +71,7 @@ function generateMarkdown(answers) {
   ${renderLicenseSection(answers)} 
 
   ## Contributing 👪
-  ${answers.contributing}
+  ${answers.contributions}
 
   ## Tests 🧪
   ${answers.tests}
